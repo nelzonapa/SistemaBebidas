@@ -52,26 +52,9 @@ class PuestoVigilanciaVisitor:public UsuarioVisitor{
 public:
 	void accept(Visitor *);
 	void iniciar_sesion(UsuarioVisitor* user, UsuarioSesion* datos){
-		/*
-		while (true) {
-			SistemaBebidas::PersonalDeVigilanciaForm PersonalVigilanciaSeccion(datos);
-			//PersonalVigilanciaSeccion.ShowDialog();
-			Application::Run(% PersonalVigilanciaSeccion);
-			if (PersonalVigilanciaSeccion.switchPuestoVigilancia) {
-				SistemaBebidas::PuestoVigilanciaMostrar mostrar_usuarios;
-				mostrar_usuarios.ShowDialog();
-			}
-			if (PersonalVigilanciaSeccion.switchPuestoVigilancia2) {
-				SistemaBebidas::RegistroDeIngreso mostrar_registro;
-				mostrar_registro.ShowDialog();
-				break;
-			}
-		}
-		*/
 		SistemaBebidas::PersonalDeVigilanciaForm PersonalVigilanciaSeccion(datos);
 		Application::Run(% PersonalVigilanciaSeccion);
 	}
-
 };
 
 class Visitor{
