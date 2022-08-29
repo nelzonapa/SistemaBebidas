@@ -9,7 +9,5 @@ C:\Users\HP\Desktop\Codigo\SistemaBebidas\SistemaBebidas\OrdenFacade.h(95,1): wa
 C:\Users\HP\Desktop\Codigo\SistemaBebidas\SistemaBebidas\OrdenFacade.h(117,1): warning C4267: 'inicializando': conversión de 'size_t' a 'int'; posible pérdida de datos
 C:\Users\HP\Desktop\Codigo\SistemaBebidas\SistemaBebidas\OrdenFacade.h(139,1): warning C4267: 'inicializando': conversión de 'size_t' a 'int'; posible pérdida de datos
 C:\Users\HP\Desktop\Codigo\SistemaBebidas\SistemaBebidas\OrdenFacade.h(161,1): warning C4267: 'inicializando': conversión de 'size_t' a 'int'; posible pérdida de datos
-  RegistroDeIngreso.cpp
-  Generando código...
   AgregarStock.obj : se encontró un módulo MSIL; vinculación incremental deshabilitada para MSIL; ejecutando vínculo completo
   SistemaBebidas.vcxproj -> C:\Users\HP\Desktop\Codigo\SistemaBebidas\x64\Debug\SistemaBebidas.exe

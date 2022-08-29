@@ -58,6 +58,9 @@ namespace SistemaBebidas {
 	private: System::Windows::Forms::Button^ button5;
 	private: System::Windows::Forms::Button^ button6;
 	private: System::Windows::Forms::Button^ btnVerAlmacen;
+	private: System::Windows::Forms::Label^ label11;
+	private: System::Windows::Forms::Button^ btncerrarSesion;
+
 
 	private:
 		/// <summary>
@@ -89,6 +92,8 @@ namespace SistemaBebidas {
 			this->button5 = (gcnew System::Windows::Forms::Button());
 			this->button6 = (gcnew System::Windows::Forms::Button());
 			this->btnVerAlmacen = (gcnew System::Windows::Forms::Button());
+			this->label11 = (gcnew System::Windows::Forms::Label());
+			this->btncerrarSesion = (gcnew System::Windows::Forms::Button());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			this->SuspendLayout();
 			// 
@@ -98,7 +103,7 @@ namespace SistemaBebidas {
 			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label1->ForeColor = System::Drawing::Color::Black;
-			this->label1->Location = System::Drawing::Point(317, 52);
+			this->label1->Location = System::Drawing::Point(361, 98);
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(51, 20);
 			this->label1->TabIndex = 0;
@@ -107,7 +112,7 @@ namespace SistemaBebidas {
 			// pictureBox1
 			// 
 			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
-			this->pictureBox1->Location = System::Drawing::Point(24, 103);
+			this->pictureBox1->Location = System::Drawing::Point(36, 149);
 			this->pictureBox1->Name = L"pictureBox1";
 			this->pictureBox1->Size = System::Drawing::Size(150, 125);
 			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -119,7 +124,7 @@ namespace SistemaBebidas {
 			this->label2->AutoSize = true;
 			this->label2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label2->Location = System::Drawing::Point(317, 103);
+			this->label2->Location = System::Drawing::Point(361, 149);
 			this->label2->Name = L"label2";
 			this->label2->Size = System::Drawing::Size(51, 20);
 			this->label2->TabIndex = 3;
@@ -130,7 +135,7 @@ namespace SistemaBebidas {
 			this->label3->AutoSize = true;
 			this->label3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label3->Location = System::Drawing::Point(317, 160);
+			this->label3->Location = System::Drawing::Point(361, 206);
 			this->label3->Name = L"label3";
 			this->label3->Size = System::Drawing::Size(51, 20);
 			this->label3->TabIndex = 3;
@@ -141,7 +146,7 @@ namespace SistemaBebidas {
 			this->label4->AutoSize = true;
 			this->label4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label4->Location = System::Drawing::Point(317, 217);
+			this->label4->Location = System::Drawing::Point(361, 263);
 			this->label4->Name = L"label4";
 			this->label4->Size = System::Drawing::Size(51, 20);
 			this->label4->TabIndex = 3;
@@ -153,7 +158,7 @@ namespace SistemaBebidas {
 			this->label5->AutoSize = true;
 			this->label5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label5->Location = System::Drawing::Point(317, 275);
+			this->label5->Location = System::Drawing::Point(361, 321);
 			this->label5->Name = L"label5";
 			this->label5->Size = System::Drawing::Size(51, 20);
 			this->label5->TabIndex = 3;
@@ -166,7 +171,7 @@ namespace SistemaBebidas {
 			this->label6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label6->ForeColor = System::Drawing::Color::Black;
-			this->label6->Location = System::Drawing::Point(212, 52);
+			this->label6->Location = System::Drawing::Point(256, 98);
 			this->label6->Name = L"label6";
 			this->label6->Size = System::Drawing::Size(77, 20);
 			this->label6->TabIndex = 0;
@@ -177,7 +182,7 @@ namespace SistemaBebidas {
 			this->label7->AutoSize = true;
 			this->label7->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label7->Location = System::Drawing::Point(212, 103);
+			this->label7->Location = System::Drawing::Point(256, 149);
 			this->label7->Name = L"label7";
 			this->label7->Size = System::Drawing::Size(77, 20);
 			this->label7->TabIndex = 3;
@@ -188,7 +193,7 @@ namespace SistemaBebidas {
 			this->label8->AutoSize = true;
 			this->label8->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label8->Location = System::Drawing::Point(213, 159);
+			this->label8->Location = System::Drawing::Point(257, 205);
 			this->label8->Name = L"label8";
 			this->label8->Size = System::Drawing::Size(56, 20);
 			this->label8->TabIndex = 3;
@@ -199,7 +204,7 @@ namespace SistemaBebidas {
 			this->label9->AutoSize = true;
 			this->label9->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label9->Location = System::Drawing::Point(213, 217);
+			this->label9->Location = System::Drawing::Point(257, 263);
 			this->label9->Name = L"label9";
 			this->label9->Size = System::Drawing::Size(64, 20);
 			this->label9->TabIndex = 3;
@@ -211,7 +216,7 @@ namespace SistemaBebidas {
 			this->label10->AutoSize = true;
 			this->label10->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label10->Location = System::Drawing::Point(213, 275);
+			this->label10->Location = System::Drawing::Point(257, 321);
 			this->label10->Name = L"label10";
 			this->label10->Size = System::Drawing::Size(92, 20);
 			this->label10->TabIndex = 3;
@@ -225,7 +230,7 @@ namespace SistemaBebidas {
 			this->button2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->button2->ForeColor = System::Drawing::Color::White;
-			this->button2->Location = System::Drawing::Point(577, 121);
+			this->button2->Location = System::Drawing::Point(576, 114);
 			this->button2->Name = L"button2";
 			this->button2->Size = System::Drawing::Size(395, 53);
 			this->button2->TabIndex = 4;
@@ -240,7 +245,7 @@ namespace SistemaBebidas {
 			this->button4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->button4->ForeColor = System::Drawing::Color::White;
-			this->button4->Location = System::Drawing::Point(577, 190);
+			this->button4->Location = System::Drawing::Point(576, 183);
 			this->button4->Name = L"button4";
 			this->button4->Size = System::Drawing::Size(395, 56);
 			this->button4->TabIndex = 4;
@@ -255,7 +260,7 @@ namespace SistemaBebidas {
 			this->button5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->button5->ForeColor = System::Drawing::Color::White;
-			this->button5->Location = System::Drawing::Point(577, 263);
+			this->button5->Location = System::Drawing::Point(576, 256);
 			this->button5->Name = L"button5";
 			this->button5->Size = System::Drawing::Size(184, 85);
 			this->button5->TabIndex = 4;
@@ -270,7 +275,7 @@ namespace SistemaBebidas {
 			this->button6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->button6->ForeColor = System::Drawing::Color::White;
-			this->button6->Location = System::Drawing::Point(786, 263);
+			this->button6->Location = System::Drawing::Point(785, 256);
 			this->button6->Name = L"button6";
 			this->button6->Size = System::Drawing::Size(186, 85);
 			this->button6->TabIndex = 4;
@@ -285,7 +290,7 @@ namespace SistemaBebidas {
 			this->btnVerAlmacen->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->btnVerAlmacen->ForeColor = System::Drawing::Color::White;
-			this->btnVerAlmacen->Location = System::Drawing::Point(577, 52);
+			this->btnVerAlmacen->Location = System::Drawing::Point(576, 45);
 			this->btnVerAlmacen->Name = L"btnVerAlmacen";
 			this->btnVerAlmacen->Size = System::Drawing::Size(395, 53);
 			this->btnVerAlmacen->TabIndex = 5;
@@ -293,15 +298,45 @@ namespace SistemaBebidas {
 			this->btnVerAlmacen->UseVisualStyleBackColor = false;
 			this->btnVerAlmacen->Click += gcnew System::EventHandler(this, &JefeDeAlmacenForm::btnVerAlmacen_Click);
 			// 
+			// label11
+			// 
+			this->label11->AutoSize = true;
+			this->label11->Font = (gcnew System::Drawing::Font(L"MS UI Gothic", 25.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label11->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->label11->Location = System::Drawing::Point(30, 25);
+			this->label11->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label11->Name = L"label11";
+			this->label11->Size = System::Drawing::Size(401, 35);
+			this->label11->TabIndex = 8;
+			this->label11->Text = L"MODULO DE VIGILANCIA";
+			// 
+			// btncerrarSesion
+			// 
+			this->btncerrarSesion->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(20)), static_cast<System::Int32>(static_cast<System::Byte>(27)),
+				static_cast<System::Int32>(static_cast<System::Byte>(65)));
+			this->btncerrarSesion->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->btncerrarSesion->ForeColor = System::Drawing::Color::White;
+			this->btncerrarSesion->Location = System::Drawing::Point(638, 368);
+			this->btncerrarSesion->Name = L"btncerrarSesion";
+			this->btncerrarSesion->Size = System::Drawing::Size(273, 56);
+			this->btncerrarSesion->TabIndex = 4;
+			this->btncerrarSesion->Text = L"Cerrar Sesion";
+			this->btncerrarSesion->UseVisualStyleBackColor = false;
+			this->btncerrarSesion->Click += gcnew System::EventHandler(this, &JefeDeAlmacenForm::btnCerrarSesion_Click);
+			// 
 			// JefeDeAlmacenForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(152)), static_cast<System::Int32>(static_cast<System::Byte>(185)),
 				static_cast<System::Int32>(static_cast<System::Byte>(242)));
-			this->ClientSize = System::Drawing::Size(1066, 406);
+			this->ClientSize = System::Drawing::Size(1066, 448);
+			this->Controls->Add(this->label11);
 			this->Controls->Add(this->btnVerAlmacen);
 			this->Controls->Add(this->button6);
+			this->Controls->Add(this->btncerrarSesion);
 			this->Controls->Add(this->button4);
 			this->Controls->Add(this->button5);
 			this->Controls->Add(this->button2);
@@ -368,6 +403,7 @@ namespace SistemaBebidas {
 		//while (true) {
 			SistemaBebidas::PersonalDeVigilanciaForm PersonalVigilanciaSeccion(this->datosSesion);
 			PersonalVigilanciaSeccion.ShowDialog();
+			/*
 			if (PersonalVigilanciaSeccion.switchPuestoVigilancia) {
 				SistemaBebidas::PuestoVigilanciaMostrar mostrar_usuarios;
 				mostrar_usuarios.ShowDialog();
@@ -377,10 +413,12 @@ namespace SistemaBebidas {
 				mostrar_registro.ShowDialog();
 				//break;
 			}
+			*/
 		//}
 	}
 	private: System::Void button5_Click(System::Object^ sender, System::EventArgs^ e) {
-
+		SistemaBebidas::PuestoVigilanciaMostrar mostrar_usuarios;
+		mostrar_usuarios.ShowDialog();
 	}
 	private: System::Void btnVerAlmacen_Click(System::Object^ sender, System::EventArgs^ e) {
 		SistemaBebidas::ProductosForm productos_form;
@@ -390,5 +428,8 @@ namespace SistemaBebidas {
 		SistemaBebidas::Estadisticas estadisticasForm;
 		estadisticasForm.ShowDialog();
 	}
+private: System::Void btnCerrarSesion_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->Close();
+}
 };
 }

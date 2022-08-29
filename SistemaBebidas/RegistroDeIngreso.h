@@ -86,23 +86,23 @@ namespace SistemaBebidas {
 			this->Buscador = (gcnew System::Windows::Forms::TextBox());
 			this->btnBuscar = (gcnew System::Windows::Forms::Button());
 			this->data_busqueda = (gcnew System::Windows::Forms::DataGridView());
-			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->ID = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->NOMBRE = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->APELLIDOS = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->PERMISO = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->HORA = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->FECHA = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->label2 = (gcnew System::Windows::Forms::Label());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->data_grid))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->data_busqueda))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// btnRegresar
 			// 
-			this->btnRegresar->Location = System::Drawing::Point(1048, 569);
-			this->btnRegresar->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->btnRegresar->Location = System::Drawing::Point(892, 469);
+			this->btnRegresar->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->btnRegresar->Name = L"btnRegresar";
-			this->btnRegresar->Size = System::Drawing::Size(136, 50);
+			this->btnRegresar->Size = System::Drawing::Size(102, 41);
 			this->btnRegresar->TabIndex = 33;
 			this->btnRegresar->Text = L"REGRESAR";
 			this->btnRegresar->UseVisualStyleBackColor = true;
@@ -112,9 +112,10 @@ namespace SistemaBebidas {
 			// 
 			this->DIA->AutoSize = true;
 			this->DIA->Font = (gcnew System::Drawing::Font(L"MS UI Gothic", 16));
-			this->DIA->Location = System::Drawing::Point(932, 206);
+			this->DIA->Location = System::Drawing::Point(699, 167);
+			this->DIA->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->DIA->Name = L"DIA";
-			this->DIA->Size = System::Drawing::Size(0, 27);
+			this->DIA->Size = System::Drawing::Size(0, 22);
 			this->DIA->TabIndex = 27;
 			// 
 			// label1
@@ -122,9 +123,10 @@ namespace SistemaBebidas {
 			this->label1->AutoSize = true;
 			this->label1->Font = (gcnew System::Drawing::Font(L"MS UI Gothic", 25.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label1->Location = System::Drawing::Point(109, 24);
+			this->label1->Location = System::Drawing::Point(82, 20);
+			this->label1->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(956, 43);
+			this->label1->Size = System::Drawing::Size(784, 35);
 			this->label1->TabIndex = 25;
 			this->label1->Text = L"REGISTRO DE ENTRADA Y SALIDA DE USUARIOS";
 			// 
@@ -132,12 +134,12 @@ namespace SistemaBebidas {
 			// 
 			this->data_grid->BackgroundColor = System::Drawing::SystemColors::ButtonFace;
 			this->data_grid->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->data_grid->Location = System::Drawing::Point(38, 98);
-			this->data_grid->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->data_grid->Location = System::Drawing::Point(28, 80);
+			this->data_grid->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->data_grid->Name = L"data_grid";
 			this->data_grid->RowHeadersWidth = 51;
 			this->data_grid->RowTemplate->Height = 24;
-			this->data_grid->Size = System::Drawing::Size(922, 306);
+			this->data_grid->Size = System::Drawing::Size(720, 249);
 			this->data_grid->TabIndex = 24;
 			// 
 			// filtro
@@ -148,30 +150,28 @@ namespace SistemaBebidas {
 				L"ID", L"NOMBRE", L"APELLIDOS", L"PERMISO", L"HORA",
 					L"FECHA"
 			});
-			this->filtro->Location = System::Drawing::Point(987, 213);
-			this->filtro->Margin = System::Windows::Forms::Padding(4);
+			this->filtro->Location = System::Drawing::Point(824, 121);
 			this->filtro->Name = L"filtro";
-			this->filtro->Size = System::Drawing::Size(196, 34);
+			this->filtro->Size = System::Drawing::Size(148, 28);
 			this->filtro->TabIndex = 53;
 			this->filtro->SelectedIndexChanged += gcnew System::EventHandler(this, &RegistroDeIngreso::filtro_SelectedIndexChanged);
 			// 
 			// Buscador
 			// 
 			this->Buscador->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13));
-			this->Buscador->Location = System::Drawing::Point(987, 303);
-			this->Buscador->Margin = System::Windows::Forms::Padding(4);
+			this->Buscador->Location = System::Drawing::Point(824, 194);
 			this->Buscador->Name = L"Buscador";
-			this->Buscador->Size = System::Drawing::Size(196, 32);
+			this->Buscador->Size = System::Drawing::Size(148, 27);
 			this->Buscador->TabIndex = 52;
 			// 
 			// btnBuscar
 			// 
 			this->btnBuscar->BackColor = System::Drawing::Color::White;
 			this->btnBuscar->Font = (gcnew System::Drawing::Font(L"MS UI Gothic", 10, System::Drawing::FontStyle::Bold));
-			this->btnBuscar->Location = System::Drawing::Point(987, 391);
-			this->btnBuscar->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->btnBuscar->Location = System::Drawing::Point(824, 266);
+			this->btnBuscar->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->btnBuscar->Name = L"btnBuscar";
-			this->btnBuscar->Size = System::Drawing::Size(196, 37);
+			this->btnBuscar->Size = System::Drawing::Size(147, 30);
 			this->btnBuscar->TabIndex = 51;
 			this->btnBuscar->Text = L"BUSCAR";
 			this->btnBuscar->UseVisualStyleBackColor = false;
@@ -185,23 +185,13 @@ namespace SistemaBebidas {
 				this->ID, this->NOMBRE,
 					this->APELLIDOS, this->PERMISO, this->HORA, this->FECHA
 			});
-			this->data_busqueda->Location = System::Drawing::Point(38, 462);
-			this->data_busqueda->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->data_busqueda->Location = System::Drawing::Point(28, 375);
+			this->data_busqueda->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->data_busqueda->Name = L"data_busqueda";
 			this->data_busqueda->RowHeadersWidth = 51;
 			this->data_busqueda->RowTemplate->Height = 24;
-			this->data_busqueda->Size = System::Drawing::Size(922, 168);
+			this->data_busqueda->Size = System::Drawing::Size(805, 136);
 			this->data_busqueda->TabIndex = 54;
-			// 
-			// label2
-			// 
-			this->label2->AutoSize = true;
-			this->label2->Font = (gcnew System::Drawing::Font(L"MS UI Gothic", 14));
-			this->label2->Location = System::Drawing::Point(48, 420);
-			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(136, 24);
-			this->label2->TabIndex = 55;
-			this->label2->Text = L"BUSQUEDA:";
 			// 
 			// ID
 			// 
@@ -245,12 +235,23 @@ namespace SistemaBebidas {
 			this->FECHA->Name = L"FECHA";
 			this->FECHA->Width = 125;
 			// 
+			// label2
+			// 
+			this->label2->AutoSize = true;
+			this->label2->Font = (gcnew System::Drawing::Font(L"MS UI Gothic", 14));
+			this->label2->Location = System::Drawing::Point(36, 341);
+			this->label2->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label2->Name = L"label2";
+			this->label2->Size = System::Drawing::Size(108, 19);
+			this->label2->TabIndex = 55;
+			this->label2->Text = L"BUSQUEDA:";
+			// 
 			// RegistroDeIngreso
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
+			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::SystemColors::ActiveCaption;
-			this->ClientSize = System::Drawing::Size(1196, 641);
+			this->ClientSize = System::Drawing::Size(1015, 521);
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->data_busqueda);
 			this->Controls->Add(this->filtro);
@@ -260,7 +261,6 @@ namespace SistemaBebidas {
 			this->Controls->Add(this->DIA);
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->data_grid);
-			this->Margin = System::Windows::Forms::Padding(4);
 			this->Name = L"RegistroDeIngreso";
 			this->Text = L"RegistroDeIngreso";
 			this->Load += gcnew System::EventHandler(this, &RegistroDeIngreso::RegistroDeIngreso_Load);

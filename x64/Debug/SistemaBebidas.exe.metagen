@@ -72,12 +72,6 @@ Class SistemaBebidas.ProductosForm: AutoLayout, AnsiClass, Class, Public, Before
 Class SistemaBebidas.OperarioPedidosForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(UsuarioSesion*): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
-Class SistemaBebidas.PersonalDeVigilanciaForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
-  :System.Windows.Forms.Form
-    Void .ctor(UsuarioSesion*): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
-  Fields:
-    Boolean switchPuestoVigilancia : Public
-    Boolean switchPuestoVigilancia2 : Public
 Class SistemaBebidas.PuestoVigilanciaMostrar: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
@@ -88,6 +82,12 @@ Class SistemaBebidas.RegistroDeIngreso: AutoLayout, AnsiClass, Class, Public, Be
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
   Methods:
     Consulta(): PrivateScope, Public, HideBySig
+Class SistemaBebidas.PersonalDeVigilanciaForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(UsuarioSesion*): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Boolean switchPuestoVigilancia : Public
+    Boolean switchPuestoVigilancia2 : Public
 Class SistemaBebidas.JefeDeAlmacenForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(UsuarioSesion*): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
