@@ -1,0 +1,95 @@
+  SistemaBebidas.AgregarStock.resources - Embedded, ContainedInManifestFile, 
+  SistemaBebidas.BusquedaFiltro.resources - Embedded, ContainedInManifestFile, 
+  SistemaBebidas.ControladorExpedicionForm.resources - Embedded, ContainedInManifestFile, 
+  SistemaBebidas.Estadisticas.resources - Embedded, ContainedInManifestFile, 
+  SistemaBebidas.JefeDeAlmacenForm.resources - Embedded, ContainedInManifestFile, 
+  SistemaBebidas.LoginForm.resources - Embedded, ContainedInManifestFile, 
+  SistemaBebidas.ModificarStock.resources - Embedded, ContainedInManifestFile, 
+  SistemaBebidas.OperarioPedidosForm.resources - Embedded, ContainedInManifestFile, 
+  SistemaBebidas.OrdenarStock.resources - Embedded, ContainedInManifestFile, 
+  SistemaBebidas.PersonalDeVigilanciaForm.resources - Embedded, ContainedInManifestFile, 
+  SistemaBebidas.ProductosForm.resources - Embedded, ContainedInManifestFile, 
+  SistemaBebidas.PuestoVigilanciaMostrar.resources - Embedded, ContainedInManifestFile, 
+  SistemaBebidas.RegisterForm.resources - Embedded, ContainedInManifestFile, 
+  SistemaBebidas.RegistroDeIngreso.resources - Embedded, ContainedInManifestFile, 
+  SistemaBebidas.ValidarJefeForm.resources - Embedded, ContainedInManifestFile, 
+ImageRuntimeVersion: v4.0.30319
+Assembly SistemaBebidas, Version=0.0.*, Culture=Todos los idiomas (todos los países): 
+	hash=SHA1, flags=PublicKey
+Assembly mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a: 
+	hash=None, flags=None
+Assembly System.Windows.Forms.DataVisualization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35: 
+	hash=None, flags=None
+Assembly System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Class SistemaBebidas.AgregarStock: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class SistemaBebidas.BusquedaFiltro: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class SistemaBebidas.ModificarStock: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class SistemaBebidas.OrdenarStock: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class SistemaBebidas.ControladorExpedicionForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(UsuarioSesion*): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class SistemaBebidas.Estadisticas: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class SistemaBebidas.LoginForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    UsuarioSesion* user IsImplicitlyDereferenced : Public
+    Boolean switchToRegister : Public
+Class SistemaBebidas.RegisterForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Boolean switchToLogin : Public
+    UsuarioSesion* user IsImplicitlyDereferenced : Public
+    System.String cmbBxTxtPermiso : Public
+Class SistemaBebidas.ValidarJefeForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Boolean validacionJefe : Public
+Class SistemaBebidas.ProductosForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class SistemaBebidas.OperarioPedidosForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(UsuarioSesion*): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class SistemaBebidas.PersonalDeVigilanciaForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(UsuarioSesion*): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Boolean switchPuestoVigilancia : Public
+    Boolean switchPuestoVigilancia2 : Public
+Class SistemaBebidas.PuestoVigilanciaMostrar: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Consulta(): PrivateScope, Public, HideBySig
+Class SistemaBebidas.RegistroDeIngreso: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Consulta(): PrivateScope, Public, HideBySig
+Class SistemaBebidas.JefeDeAlmacenForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(UsuarioSesion*): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    UsuarioSesion* datosSesion : Public

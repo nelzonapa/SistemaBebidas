@@ -1,0 +1,13 @@
+> Marca: Backus
+> Nombre del producto: Cristal
+> Tipo de producto: cerveza
+> Capacidad: 350
+> Precio: 74.9
+> Cantidad: Paquete(sixpack) 6
+> ID producto: 2012910
+> Proveedor: Sergio.SAC
+> PESO: 10 (kilogramos)
+> Fecha de llegada: 15/07/2022
+> Encargado(operario(a)):  Nelzon Jorge Apaza Apaza
+
+> Fecha última de Revisión: sábado, 27 de agosto de 2022
