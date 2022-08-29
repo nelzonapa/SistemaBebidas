@@ -1,29 +1,29 @@
 ﻿  ControladorExpedicionForm.cpp
-C:\Users\HP\Desktop\Codigo\SistemaBebidas\SistemaBebidas\OrdenFacade.h(18,1): warning C4267: 'inicializando': conversión de 'size_t' a 'int'; posible pérdida de datos
-C:\Users\HP\Desktop\Codigo\SistemaBebidas\SistemaBebidas\OrdenFacade.h(41,1): warning C4267: 'inicializando': conversión de 'size_t' a 'int'; posible pérdida de datos
-C:\Users\HP\Desktop\Codigo\SistemaBebidas\SistemaBebidas\OrdenFacade.h(63,1): warning C4267: 'inicializando': conversión de 'size_t' a 'int'; posible pérdida de datos
-C:\Users\HP\Desktop\Codigo\SistemaBebidas\SistemaBebidas\OrdenFacade.h(85,1): warning C4267: 'inicializando': conversión de 'size_t' a 'int'; posible pérdida de datos
-C:\Users\HP\Desktop\Codigo\SistemaBebidas\SistemaBebidas\OrdenFacade.h(107,1): warning C4267: 'inicializando': conversión de 'size_t' a 'int'; posible pérdida de datos
-C:\Users\HP\Desktop\Codigo\SistemaBebidas\SistemaBebidas\OrdenFacade.h(129,1): warning C4267: 'inicializando': conversión de 'size_t' a 'int'; posible pérdida de datos
-C:\Users\HP\Desktop\Codigo\SistemaBebidas\SistemaBebidas\OrdenFacade.h(151,1): warning C4267: 'inicializando': conversión de 'size_t' a 'int'; posible pérdida de datos
+C:\Users\HP\Desktop\Codigo\SistemaBebidas\SistemaBebidas\OrdenFacade.h(28,1): warning C4267: 'inicializando': conversión de 'size_t' a 'int'; posible pérdida de datos
+C:\Users\HP\Desktop\Codigo\SistemaBebidas\SistemaBebidas\OrdenFacade.h(51,1): warning C4267: 'inicializando': conversión de 'size_t' a 'int'; posible pérdida de datos
+C:\Users\HP\Desktop\Codigo\SistemaBebidas\SistemaBebidas\OrdenFacade.h(73,1): warning C4267: 'inicializando': conversión de 'size_t' a 'int'; posible pérdida de datos
+C:\Users\HP\Desktop\Codigo\SistemaBebidas\SistemaBebidas\OrdenFacade.h(95,1): warning C4267: 'inicializando': conversión de 'size_t' a 'int'; posible pérdida de datos
+C:\Users\HP\Desktop\Codigo\SistemaBebidas\SistemaBebidas\OrdenFacade.h(117,1): warning C4267: 'inicializando': conversión de 'size_t' a 'int'; posible pérdida de datos
+C:\Users\HP\Desktop\Codigo\SistemaBebidas\SistemaBebidas\OrdenFacade.h(139,1): warning C4267: 'inicializando': conversión de 'size_t' a 'int'; posible pérdida de datos
+C:\Users\HP\Desktop\Codigo\SistemaBebidas\SistemaBebidas\OrdenFacade.h(161,1): warning C4267: 'inicializando': conversión de 'size_t' a 'int'; posible pérdida de datos
   Main.cpp
   The contents of <format> are available only with C++20 or later.
 C:\Users\HP\Desktop\Codigo\SistemaBebidas\SistemaBebidas\LoginForm.h(346,25): warning C4996: 'localtime': This function or variable may be unsafe. Consider using localtime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Users\HP\Desktop\Codigo\SistemaBebidas\SistemaBebidas\OrdenFacade.h(18,1): warning C4267: 'inicializando': conversión de 'size_t' a 'int'; posible pérdida de datos
-C:\Users\HP\Desktop\Codigo\SistemaBebidas\SistemaBebidas\OrdenFacade.h(41,1): warning C4267: 'inicializando': conversión de 'size_t' a 'int'; posible pérdida de datos
-C:\Users\HP\Desktop\Codigo\SistemaBebidas\SistemaBebidas\OrdenFacade.h(63,1): warning C4267: 'inicializando': conversión de 'size_t' a 'int'; posible pérdida de datos
-C:\Users\HP\Desktop\Codigo\SistemaBebidas\SistemaBebidas\OrdenFacade.h(85,1): warning C4267: 'inicializando': conversión de 'size_t' a 'int'; posible pérdida de datos
-C:\Users\HP\Desktop\Codigo\SistemaBebidas\SistemaBebidas\OrdenFacade.h(107,1): warning C4267: 'inicializando': conversión de 'size_t' a 'int'; posible pérdida de datos
-C:\Users\HP\Desktop\Codigo\SistemaBebidas\SistemaBebidas\OrdenFacade.h(129,1): warning C4267: 'inicializando': conversión de 'size_t' a 'int'; posible pérdida de datos
-C:\Users\HP\Desktop\Codigo\SistemaBebidas\SistemaBebidas\OrdenFacade.h(151,1): warning C4267: 'inicializando': conversión de 'size_t' a 'int'; posible pérdida de datos
+C:\Users\HP\Desktop\Codigo\SistemaBebidas\SistemaBebidas\OrdenFacade.h(28,1): warning C4267: 'inicializando': conversión de 'size_t' a 'int'; posible pérdida de datos
+C:\Users\HP\Desktop\Codigo\SistemaBebidas\SistemaBebidas\OrdenFacade.h(51,1): warning C4267: 'inicializando': conversión de 'size_t' a 'int'; posible pérdida de datos
+C:\Users\HP\Desktop\Codigo\SistemaBebidas\SistemaBebidas\OrdenFacade.h(73,1): warning C4267: 'inicializando': conversión de 'size_t' a 'int'; posible pérdida de datos
+C:\Users\HP\Desktop\Codigo\SistemaBebidas\SistemaBebidas\OrdenFacade.h(95,1): warning C4267: 'inicializando': conversión de 'size_t' a 'int'; posible pérdida de datos
+C:\Users\HP\Desktop\Codigo\SistemaBebidas\SistemaBebidas\OrdenFacade.h(117,1): warning C4267: 'inicializando': conversión de 'size_t' a 'int'; posible pérdida de datos
+C:\Users\HP\Desktop\Codigo\SistemaBebidas\SistemaBebidas\OrdenFacade.h(139,1): warning C4267: 'inicializando': conversión de 'size_t' a 'int'; posible pérdida de datos
+C:\Users\HP\Desktop\Codigo\SistemaBebidas\SistemaBebidas\OrdenFacade.h(161,1): warning C4267: 'inicializando': conversión de 'size_t' a 'int'; posible pérdida de datos
   OrdenarStock.cpp
-C:\Users\HP\Desktop\Codigo\SistemaBebidas\SistemaBebidas\OrdenFacade.h(18,1): warning C4267: 'inicializando': conversión de 'size_t' a 'int'; posible pérdida de datos
-C:\Users\HP\Desktop\Codigo\SistemaBebidas\SistemaBebidas\OrdenFacade.h(41,1): warning C4267: 'inicializando': conversión de 'size_t' a 'int'; posible pérdida de datos
-C:\Users\HP\Desktop\Codigo\SistemaBebidas\SistemaBebidas\OrdenFacade.h(63,1): warning C4267: 'inicializando': conversión de 'size_t' a 'int'; posible pérdida de datos
-C:\Users\HP\Desktop\Codigo\SistemaBebidas\SistemaBebidas\OrdenFacade.h(85,1): warning C4267: 'inicializando': conversión de 'size_t' a 'int'; posible pérdida de datos
-C:\Users\HP\Desktop\Codigo\SistemaBebidas\SistemaBebidas\OrdenFacade.h(107,1): warning C4267: 'inicializando': conversión de 'size_t' a 'int'; posible pérdida de datos
-C:\Users\HP\Desktop\Codigo\SistemaBebidas\SistemaBebidas\OrdenFacade.h(129,1): warning C4267: 'inicializando': conversión de 'size_t' a 'int'; posible pérdida de datos
-C:\Users\HP\Desktop\Codigo\SistemaBebidas\SistemaBebidas\OrdenFacade.h(151,1): warning C4267: 'inicializando': conversión de 'size_t' a 'int'; posible pérdida de datos
+C:\Users\HP\Desktop\Codigo\SistemaBebidas\SistemaBebidas\OrdenFacade.h(28,1): warning C4267: 'inicializando': conversión de 'size_t' a 'int'; posible pérdida de datos
+C:\Users\HP\Desktop\Codigo\SistemaBebidas\SistemaBebidas\OrdenFacade.h(51,1): warning C4267: 'inicializando': conversión de 'size_t' a 'int'; posible pérdida de datos
+C:\Users\HP\Desktop\Codigo\SistemaBebidas\SistemaBebidas\OrdenFacade.h(73,1): warning C4267: 'inicializando': conversión de 'size_t' a 'int'; posible pérdida de datos
+C:\Users\HP\Desktop\Codigo\SistemaBebidas\SistemaBebidas\OrdenFacade.h(95,1): warning C4267: 'inicializando': conversión de 'size_t' a 'int'; posible pérdida de datos
+C:\Users\HP\Desktop\Codigo\SistemaBebidas\SistemaBebidas\OrdenFacade.h(117,1): warning C4267: 'inicializando': conversión de 'size_t' a 'int'; posible pérdida de datos
+C:\Users\HP\Desktop\Codigo\SistemaBebidas\SistemaBebidas\OrdenFacade.h(139,1): warning C4267: 'inicializando': conversión de 'size_t' a 'int'; posible pérdida de datos
+C:\Users\HP\Desktop\Codigo\SistemaBebidas\SistemaBebidas\OrdenFacade.h(161,1): warning C4267: 'inicializando': conversión de 'size_t' a 'int'; posible pérdida de datos
   Generando código...
   AgregarStock.obj : se encontró un módulo MSIL; vinculación incremental deshabilitada para MSIL; ejecutando vínculo completo
   SistemaBebidas.vcxproj -> C:\Users\HP\Desktop\Codigo\SistemaBebidas\x64\Debug\SistemaBebidas.exe

@@ -6,9 +6,19 @@
 #include "Nodo.h"
 #include <vector>
 
+template <typename T>
+bool ascendente(T x, T y) {
+    return x < y;
+}
+template <typename T>
+bool descendente(T x, T y) {
+    return x > y;
+}
+
 class OrdenId {
 public:
-    std::vector<Producto> ordenar(std::shared_ptr<ArrayDinamicoRef<Producto>> listaProductos) {
+
+    std::vector<Producto> ordenar(std::shared_ptr<ArrayDinamicoRef<Producto>> listaProductos, bool(*orden)(int, int)) {
         std::vector<Producto>ordenado;
         int Nelementos = listaProductos.get()->getSize();
         for (int i = 0; i < Nelementos; i++) {
@@ -19,7 +29,7 @@ public:
 
         for (int i = 1; i < tam; i++) {
             int j = i;
-            while (j > 0 && ordenado[j].id < ordenado[j - 1].id) {
+            while (j > 0 && orden(ordenado[j].id, ordenado[j - 1].id)) {
                 Producto Aux = ordenado[j];
                 ordenado[j] = ordenado[j - 1];
                 ordenado[j - 1] = Aux;
@@ -32,7 +42,7 @@ public:
 
 class OrdenMarca {
 public:
-    std::vector<Producto> ordenar(std::shared_ptr<ArrayDinamicoRef<Producto>> listaProductos) {
+    std::vector<Producto> ordenar(std::shared_ptr<ArrayDinamicoRef<Producto>> listaProductos, bool(*orden)(std::string, std::string)) {
         std::vector<Producto>ordenado;
         int Nelementos = listaProductos.get()->getSize();
         for (int i = 0; i < Nelementos; i++) {
@@ -41,7 +51,7 @@ public:
         int tam = ordenado.size();
         for (int i = 1; i < tam; i++) {
             int j = i;
-            while (j > 0 && ordenado[j].marca < ordenado[j - 1].marca) {
+            while (j > 0 && orden(ordenado[j].marca, ordenado[j - 1].marca)) {
                 Producto Aux = ordenado[j];
                 ordenado[j] = ordenado[j - 1];
                 ordenado[j - 1] = Aux;
@@ -54,7 +64,7 @@ public:
 
 class OrdenNombre {
 public:
-    std::vector<Producto> ordenar(std::shared_ptr<ArrayDinamicoRef<Producto>> listaProductos) {
+    std::vector<Producto> ordenar(std::shared_ptr<ArrayDinamicoRef<Producto>> listaProductos, bool(*orden)(std::string, std::string)) {
         std::vector<Producto>ordenado;
         int Nelementos = listaProductos.get()->getSize();
         for (int i = 0; i < Nelementos; i++) {
@@ -63,7 +73,7 @@ public:
         int tam = ordenado.size();
         for (int i = 1; i < tam; i++) {
             int j = i;
-            while (j > 0 && ordenado[j].nombre < ordenado[j - 1].nombre) {
+            while (j > 0 && orden(ordenado[j].nombre, ordenado[j - 1].nombre)) {
                 Producto Aux = ordenado[j];
                 ordenado[j] = ordenado[j - 1];
                 ordenado[j - 1] = Aux;
@@ -76,7 +86,7 @@ public:
 
 class OrdenTipo {
 public:
-    std::vector<Producto> ordenar(std::shared_ptr<ArrayDinamicoRef<Producto>> listaProductos) {
+    std::vector<Producto> ordenar(std::shared_ptr<ArrayDinamicoRef<Producto>> listaProductos, bool(*orden)(std::string, std::string)) {
         std::vector<Producto>ordenado;
         int Nelementos = listaProductos.get()->getSize();
         for (int i = 0; i < Nelementos; i++) {
@@ -85,7 +95,7 @@ public:
         int tam = ordenado.size();
         for (int i = 1; i < tam; i++) {
             int j = i;
-            while (j > 0 && ordenado[j].tipo < ordenado[j - 1].tipo) {
+            while (j > 0 && orden(ordenado[j].tipo, ordenado[j - 1].tipo)) {
                 Producto Aux = ordenado[j];
                 ordenado[j] = ordenado[j - 1];
                 ordenado[j - 1] = Aux;
@@ -98,7 +108,7 @@ public:
 
 class OrdenPrecio {
 public:
-    std::vector<Producto> ordenar(std::shared_ptr<ArrayDinamicoRef<Producto>> listaProductos) {
+    std::vector<Producto> ordenar(std::shared_ptr<ArrayDinamicoRef<Producto>> listaProductos, bool(*orden)(double, double)) {
         std::vector<Producto>ordenado;
         int Nelementos = listaProductos.get()->getSize();
         for (int i = 0; i < Nelementos; i++) {
@@ -107,7 +117,7 @@ public:
         int tam = ordenado.size();
         for (int i = 1; i < tam; i++) {
             int j = i;
-            while (j > 0 && ordenado[j].precio < ordenado[j - 1].precio) {
+            while (j > 0 && orden(ordenado[j].precio, ordenado[j - 1].precio)) {
                 Producto Aux = ordenado[j];
                 ordenado[j] = ordenado[j - 1];
                 ordenado[j - 1] = Aux;
@@ -120,7 +130,7 @@ public:
 
 class OrdenCapacidad {
 public:
-    std::vector<Producto> ordenar(std::shared_ptr<ArrayDinamicoRef<Producto>> listaProductos) {
+    std::vector<Producto> ordenar(std::shared_ptr<ArrayDinamicoRef<Producto>> listaProductos, bool(*orden)(double, double)) {
         std::vector<Producto>ordenado;
         int Nelementos = listaProductos.get()->getSize();
         for (int i = 0; i < Nelementos; i++) {
@@ -129,7 +139,7 @@ public:
         int tam = ordenado.size();
         for (int i = 1; i < tam; i++) {
             int j = i;
-            while (j > 0 && ordenado[j].capacidad < ordenado[j - 1].capacidad) {
+            while (j > 0 && orden(ordenado[j].capacidad, ordenado[j - 1].capacidad)) {
                 Producto Aux = ordenado[j];
                 ordenado[j] = ordenado[j - 1];
                 ordenado[j - 1] = Aux;
@@ -142,7 +152,7 @@ public:
 
 class OrdenStock {
 public:
-    std::vector<Producto> ordenar(std::shared_ptr<ArrayDinamicoRef<Producto>> listaProductos) {
+    std::vector<Producto> ordenar(std::shared_ptr<ArrayDinamicoRef<Producto>> listaProductos, bool(*orden)(int, int)) {
         std::vector<Producto>ordenado;
         int Nelementos = listaProductos.get()->getSize();
         for (int i = 0; i < Nelementos; i++) {
@@ -151,7 +161,7 @@ public:
         int tam = ordenado.size();
         for (int i = 1; i < tam; i++) {
             int j = i;
-            while (j > 0 && ordenado[j].stock < ordenado[j - 1].stock) {
+            while (j > 0 && orden(ordenado[j].stock, ordenado[j - 1].stock)) {
                 Producto Aux = ordenado[j];
                 ordenado[j] = ordenado[j - 1];
                 ordenado[j - 1] = Aux;
@@ -174,28 +184,63 @@ private:
     OrdenStock ordenstock;
 
 public:
-    std::vector<Producto> ordenar(std::string filtro, std::shared_ptr<ArrayDinamicoRef<Producto>> listaProductos) {
+    std::vector<Producto> ordenar(std::string filtro, std::string orden, std::shared_ptr<ArrayDinamicoRef<Producto>> listaProductos) {
         std::vector<Producto>Aux;
         if (filtro == "id") {
-            Aux = ordenid.ordenar(listaProductos);
+            if (orden == "descendente") {
+                Aux = ordenid.ordenar(listaProductos, descendente);
+            }
+            else {
+                Aux = ordenid.ordenar(listaProductos, ascendente);
+            }
         }
         else if (filtro == "marca") {
-            Aux = ordenmarca.ordenar(listaProductos);
+            if (orden == "descendente") {
+                Aux = ordenmarca.ordenar(listaProductos, descendente);
+            }
+            else {
+                Aux = ordenmarca.ordenar(listaProductos, ascendente);
+            }
         }
         else if (filtro == "nombre") {
-            Aux = ordennombre.ordenar(listaProductos);
+            if (orden == "descendente") {
+                Aux = ordennombre.ordenar(listaProductos, descendente);
+            }
+            else {
+                Aux = ordennombre.ordenar(listaProductos, ascendente);
+            }
         }
         else if (filtro == "capacidad") {
-            Aux = ordencapacidad.ordenar(listaProductos);
+            if (orden == "descendente") {
+                Aux = ordencapacidad.ordenar(listaProductos, descendente);
+            }
+            else {
+                Aux = ordencapacidad.ordenar(listaProductos, ascendente);
+            }
         }
         else if (filtro == "tipo") {
-            Aux = ordentipo.ordenar(listaProductos);
+            if (orden == "descendente") {
+                Aux = ordentipo.ordenar(listaProductos, descendente);
+            }
+            else {
+                Aux = ordentipo.ordenar(listaProductos, ascendente);
+            }
         }
         else if (filtro == "precio") {
-            Aux = ordenprecio.ordenar(listaProductos);
+            if (orden == "descendente") {
+                Aux = ordenprecio.ordenar(listaProductos, descendente);
+            }
+            else {
+                Aux = ordenprecio.ordenar(listaProductos, ascendente);
+            }
         }
         else if (filtro == "stock") {
-            Aux = ordenstock.ordenar(listaProductos);
+            if (orden == "descendente") {
+                Aux = ordenstock.ordenar(listaProductos, descendente);
+            }
+            else {
+                Aux = ordenstock.ordenar(listaProductos, ascendente);
+            }
         }
 
         return Aux;

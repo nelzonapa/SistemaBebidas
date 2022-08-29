@@ -55,6 +55,8 @@ namespace SistemaBebidas {
 	private: System::Windows::Forms::ComboBox^ filtro;
 	private: System::Windows::Forms::Button^ Buscar;
 	private: System::Windows::Forms::Label^ label14;
+	private: System::Windows::Forms::Label^ label2;
+	private: System::Windows::Forms::ComboBox^ Orden;
 
 
 
@@ -83,6 +85,8 @@ namespace SistemaBebidas {
 			this->filtro = (gcnew System::Windows::Forms::ComboBox());
 			this->Buscar = (gcnew System::Windows::Forms::Button());
 			this->label14 = (gcnew System::Windows::Forms::Label());
+			this->label2 = (gcnew System::Windows::Forms::Label());
+			this->Orden = (gcnew System::Windows::Forms::ComboBox());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->cuadro))->BeginInit();
 			this->SuspendLayout();
 			// 
@@ -93,7 +97,7 @@ namespace SistemaBebidas {
 				this->Id, this->Marca,
 					this->Nombre, this->Tipo, this->Capacidad, this->Precio, this->Stock
 			});
-			this->cuadro->Location = System::Drawing::Point(72, 155);
+			this->cuadro->Location = System::Drawing::Point(62, 207);
 			this->cuadro->Name = L"cuadro";
 			this->cuadro->Size = System::Drawing::Size(743, 240);
 			this->cuadro->TabIndex = 64;
@@ -151,14 +155,14 @@ namespace SistemaBebidas {
 				L"id", L"marca", L"nombre", L"tipo", L"capacidad",
 					L"precio", L"stock"
 			});
-			this->filtro->Location = System::Drawing::Point(346, 105);
+			this->filtro->Location = System::Drawing::Point(333, 108);
 			this->filtro->Name = L"filtro";
 			this->filtro->Size = System::Drawing::Size(184, 21);
 			this->filtro->TabIndex = 62;
 			// 
 			// Buscar
 			// 
-			this->Buscar->Location = System::Drawing::Point(600, 99);
+			this->Buscar->Location = System::Drawing::Point(626, 126);
 			this->Buscar->Name = L"Buscar";
 			this->Buscar->Size = System::Drawing::Size(131, 30);
 			this->Buscar->TabIndex = 61;
@@ -172,11 +176,32 @@ namespace SistemaBebidas {
 			this->label14->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label14->ForeColor = System::Drawing::Color::Black;
-			this->label14->Location = System::Drawing::Point(135, 103);
+			this->label14->Location = System::Drawing::Point(124, 109);
 			this->label14->Name = L"label14";
-			this->label14->Size = System::Drawing::Size(188, 20);
+			this->label14->Size = System::Drawing::Size(161, 20);
 			this->label14->TabIndex = 59;
-			this->label14->Text = L"Seleccione tipo de orden:";
+			this->label14->Text = L"Seleccione categoria:";
+			// 
+			// label2
+			// 
+			this->label2->AutoSize = true;
+			this->label2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label2->ForeColor = System::Drawing::Color::Black;
+			this->label2->Location = System::Drawing::Point(124, 153);
+			this->label2->Name = L"label2";
+			this->label2->Size = System::Drawing::Size(188, 20);
+			this->label2->TabIndex = 59;
+			this->label2->Text = L"Seleccione tipo de orden:";
+			// 
+			// Orden
+			// 
+			this->Orden->FormattingEnabled = true;
+			this->Orden->Items->AddRange(gcnew cli::array< System::Object^  >(2) { L"ascendente", L"descendente" });
+			this->Orden->Location = System::Drawing::Point(333, 152);
+			this->Orden->Name = L"Orden";
+			this->Orden->Size = System::Drawing::Size(184, 21);
+			this->Orden->TabIndex = 62;
 			// 
 			// OrdenarStock
 			// 
@@ -184,10 +209,12 @@ namespace SistemaBebidas {
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(128)),
 				static_cast<System::Int32>(static_cast<System::Byte>(128)));
-			this->ClientSize = System::Drawing::Size(894, 445);
+			this->ClientSize = System::Drawing::Size(894, 477);
 			this->Controls->Add(this->cuadro);
 			this->Controls->Add(this->label1);
+			this->Controls->Add(this->Orden);
 			this->Controls->Add(this->filtro);
+			this->Controls->Add(this->label2);
 			this->Controls->Add(this->Buscar);
 			this->Controls->Add(this->label14);
 			this->Name = L"OrdenarStock";
@@ -200,12 +227,13 @@ namespace SistemaBebidas {
 #pragma endregion
 	private: System::Void Buscar_Click(System::Object^ sender, System::EventArgs^ e) {
 		String^ filtro = this->filtro->Text;
+		String^ Orden = this->Orden->Text;
 
 		FunctorProductos fun;
 		std::shared_ptr<ArrayDinamicoRef<Producto>> lista = fun();
 
 		OrdenFacade orden;
-		std::vector<Producto>ordenado = orden.ordenar(marshal_as<std::string>(filtro), lista);
+		std::vector<Producto>ordenado = orden.ordenar(marshal_as<std::string>(filtro), marshal_as<std::string>(Orden), lista);
 
 		cuadro->Rows->Clear();
 
