@@ -13,9 +13,14 @@
 #include <format>
 #include <iostream>
 #include "UsuarioSesion.h" // Singleton Pattern
+
 #include "AccesoSubject.h" // Proxy Pattern
 #include "RealAccesoSubject.h"	// Proxy Pattern
 #include "AccesoProxy.h" // Proxy Pattern
+//----------------------------------
+#include "FunctorRegistrarAcceso.h"
+//#include "UsuarioVigilancia.h"
+
 #include <msclr\marshal_cppstd.h>
 
 namespace SistemaBebidas {
@@ -361,6 +366,13 @@ namespace SistemaBebidas {
 				//sqlConn.Close();
 				//string query = "INSERT INTO Person (Name,Salary) VALUES('Max','$1200')";
 
+				//TOMA DE REGISTRO
+				FunctorRegistrarAcceso registro;
+				registro(id, nombre, apellido, permiso);
+				//FunctorVigilancia registro;
+				//registro.tomar_registro(id, nombre, apellido, permiso);
+
+				/*
 				SqlConnection sqlConn2(connString); //se crea el objeto conexion
 				sqlConn2.Open();
 
@@ -377,7 +389,8 @@ namespace SistemaBebidas {
 				command2.ExecuteNonQuery();
 
 				sqlConn2.Close();
-
+				*/
+				
 				//user = new UsuarioSesion(param1, param2, param3, param4, param5, param6, param7);
 				user.setDatosUsuarioSingleton(param1, param2, param3, param4, param5, param6, param7);
 				this->Close();

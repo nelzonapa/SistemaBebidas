@@ -76,15 +76,13 @@ public:
 	- Cada método visit, recibe punteros de diferentes clases
 	*/
 	virtual void visit(JefeAlmacenVisitor*) = 0;
-	virtual void visit(ControladorExpedicionVisitor *)=0;
-	virtual void visit(OperarioPedidosVisitor *)=0;	
-	virtual void visit(PuestoVigilanciaVisitor *)=0;
-	void total_almacen(){
-	}
+	virtual void visit(ControladorExpedicionVisitor *) = 0;
+	virtual void visit(OperarioPedidosVisitor *) = 0;	
+	virtual void visit(PuestoVigilanciaVisitor *) = 0;
 };
 
 
-class iniciar_sesion: public Visitor{
+class iniciar_sesion: public Visitor{ //Sobrecarga de Funciones
 private:
 	UsuarioVisitor* user;
 	UsuarioSesion* datos;
@@ -93,7 +91,8 @@ public:
 	iniciar_sesion(UsuarioSesion* datos){//constructor
 		this->datos = datos;
 	}
-	void visit(JefeAlmacenVisitor *a){
+	//Sobrecarga de Funciones
+	void visit(JefeAlmacenVisitor *a){ 
 		a->iniciar_sesion(a, this->datos);
 	}
 	void visit(ControladorExpedicionVisitor *b){

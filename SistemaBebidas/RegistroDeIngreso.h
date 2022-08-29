@@ -1,6 +1,13 @@
 #pragma once
 #include <msclr\marshal_cppstd.h>
 #include "RegistroDeIngreso.h"
+// **********
+#include <memory>
+#include "ArrayDinamicoRef.h"
+#include "UsuarioVigilancia.h"
+#include "FunctorVigilancia.h"
+#include "FunctorVigilanciaSelecciona.h"
+using std::stoi;
 
 namespace SistemaBebidas {
 
@@ -41,11 +48,6 @@ namespace SistemaBebidas {
 
 	protected:
 	private: System::Windows::Forms::Button^ btnRegresar;
-
-
-
-
-
 	private: System::Windows::Forms::Label^ DIA;
 
 	private: System::Windows::Forms::Label^ label1;
@@ -290,7 +292,7 @@ namespace SistemaBebidas {
 	private: System::Void btnRegresar_Click(System::Object^ sender, System::EventArgs^ e) {
 		this->Close();
 	}
-
+		   /*
 	private: System::Void btnBuscar_Click(System::Object^ sender, System::EventArgs^ e) {
 		String^ nombre = this->Buscador->Text;
 		String^ filtro = this->filtro->Text;
@@ -328,6 +330,50 @@ namespace SistemaBebidas {
 		sqlConn.Close();
 
 		Buscador->Text = "";
+	}
+	
+	*/
+
+	private: System::Void btnBuscar_Click(System::Object^ sender, System::EventArgs^ e) {
+		String^ filtro = this->filtro->Text;
+		String^ nombreB = this->Buscador->Text;
+
+		FunctorVigilanciaSelecciona obtenerTodosLosRegistros;
+		std::shared_ptr<ArrayDinamicoRef<UsuarioVi>> registrosEncontrados = obtenerTodosLosRegistros(filtro,nombreB);
+
+		data_busqueda->Rows->Clear();
+		int id = 0;
+		String^ nombre = "";
+		String^ apellidos = "";
+		String^ permiso = "";
+		String^ hora = "";
+		String^ fecha = "";
+		//String^ registro = "";
+
+		int n = 0;
+		int conta = 0;
+
+		int auxiliar = 0;
+		//if (filtro == "NOMBRE") {
+			for (int i = 0; i < registrosEncontrados->getSize(); i++) {
+				int id = registrosEncontrados.get()->getInPosicion(i)->getDato().id;
+				String^ nombre = gcnew String((registrosEncontrados.get()->getInPosicion(i)->getDato().nombre).data());
+				String^ apellidos = gcnew String((registrosEncontrados.get()->getInPosicion(i)->getDato().permiso).data());
+				String^ permiso = gcnew String((registrosEncontrados.get()->getInPosicion(i)->getDato().apellidos).data());
+				String^ hora = gcnew String((registrosEncontrados.get()->getInPosicion(i)->getDato().hora).data());
+				String^ fecha = gcnew String((registrosEncontrados.get()->getInPosicion(i)->getDato().fecha).data());
+				//registro = gcnew String((ListaUsuario.get()->getInPosicion(i)->getDato().registro).data());
+				data_busqueda->Rows->Add();
+
+				data_busqueda->Rows[auxiliar]->Cells[0]->Value = id;
+				data_busqueda->Rows[auxiliar]->Cells[1]->Value = nombre;
+				data_busqueda->Rows[auxiliar]->Cells[2]->Value = apellidos;
+				data_busqueda->Rows[auxiliar]->Cells[3]->Value = permiso;
+				data_busqueda->Rows[auxiliar]->Cells[4]->Value = hora;
+				data_busqueda->Rows[auxiliar]->Cells[5]->Value = fecha;
+				auxiliar++;
+			}
+		//}
 	}
 	private: System::Void filtro_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e) {
 	}

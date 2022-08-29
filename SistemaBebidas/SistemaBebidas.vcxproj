@@ -153,6 +153,9 @@
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="FunctorProductos.h" />
+    <ClInclude Include="FunctorRegistrarAcceso.h" />
+    <ClInclude Include="FunctorVigilancia.h" />
+    <ClInclude Include="FunctorVigilanciaSelecciona.h" />
     <ClInclude Include="JefeDeAlmacenForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -193,6 +196,7 @@
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="UsuarioSesion.h" />
+    <ClInclude Include="UsuarioVigilancia.h" />
     <ClInclude Include="UsuarioVisitor.h" />
     <ClInclude Include="ValidarJefeForm.h">
       <FileType>CppForm</FileType>
